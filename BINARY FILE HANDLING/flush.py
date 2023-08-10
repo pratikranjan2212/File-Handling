@@ -1,0 +1,8 @@
+f=open('Binary.dat',"w+")
+f.write("The Output is \n")
+f.write('My'+'work status'+'is')
+f.flush()
+f.write("Finally Over\n")
+f.close()
+file=open('Binary.dat','rb')
+print(file.read())
