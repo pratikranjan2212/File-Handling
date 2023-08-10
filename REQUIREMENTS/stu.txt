@@ -1,0 +1,5 @@
+Hello!
+My dear students
+This is a text file
+For showing you how
+File is read in python
