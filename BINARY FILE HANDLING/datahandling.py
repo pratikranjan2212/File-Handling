@@ -166,18 +166,18 @@ def Search():
     f=open("BinaryFile.dat",'rb')
     a=int(input("Enter roll no to be searched:"))
     found=0
-    while True:
-        try:
+    try:
+        while True:
             rec=pickle.load(f)
             if rec['roll']==a:
                 print('Record found')
                 print(rec)
                 found=1
-        except EOFError:
-            f.close()
-        if (found==0):
-            print('Record not found')
-            f.close()
+    except EOFError:
+        f.close()
+    if (found==0):
+        print('Record not found')
+        f.close()
 
         
 def Update():
