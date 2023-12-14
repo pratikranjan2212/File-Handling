@@ -13,6 +13,15 @@ def write():
         
     f.close()
 
+def read():
+    file=open("BinaryFile.dat",'rb')
+    try:
+        while True:
+            rec=pickle.load(file)
+            print(rec)
+    except EOFError:
+        file.close()
+
 def Update():
     with open("BinaryFile.dat",'rb+') as f:
         a=int(input("Enter roll no to be updated:"))
@@ -28,10 +37,9 @@ def Update():
                     pickle.dump(r,f)
                     found+=1
                     print(r)
-                else:
-                    print('Record not found')
         except EOFError:
             f.close()
 
 write()
+read()
 Update()
