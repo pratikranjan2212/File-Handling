@@ -75,12 +75,38 @@
 # else:
 #     print("Invalid Age.")
 
-#10 Check if two variables point to same object
-a = int(input("Enter a number: "))
-b = int(input("Enter a number: "))
-if a is b:
-    print("The variables point to the same object.")
-elif a is not b:
-    print("The variables donot point to the same object.")
-else:
-    print("Invalid choice")
+# #10 Check if two variables point to same object
+# a = int(input("Enter a number: "))
+# b = int(input("Enter a number: "))
+# if a is b:
+#     print("The variables point to the same object.")
+# elif a is not b:
+#     print("The variables donot point to the same object.")
+# else:
+#     print("Invalid choice")
+
+# #11 Organize Logistics
+# no_of_items = int(input("Enter number of items: "))
+# items_limit = int(input("Enter how many items a box can hold: "))
+# print("Number of boxes = ", no_of_items//items_limit)
+# print("Leftover items = ", no_of_items%items_limit)
+
+# #12 Check if number is a multiple of 5
+# n = int(input("Enter a number: "))
+# if n%5==0:
+#     print(True)
+# else:
+#     print(False)
+
+# #13 Check Eligibility
+# age = int(input("Enter your age: "))
+# height = float(input("Enter your height in cm: "))
+
+#14 Check Loan Eligibility
+income = int(input("Enter your monthly income: "))
+credit_score = int(input('Enter your credit score: '))
+period = int(input("Enter how many years of work experience: "))
+if (income>50000 and credit_score>700) or ((income>=30000 and income<=50000) and (credit_score>750 or period>5)):
+    print("Congrats! You are eligible to apply for loan.")
+elif income<30000:
+    print("Sorry! You are ineligible for loan.")
