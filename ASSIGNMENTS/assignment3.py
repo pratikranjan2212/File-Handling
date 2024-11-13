@@ -123,6 +123,7 @@
 # else:
 #     print("Long")
 
+
 #16 Comparing Sum of Digits
 num1 = input("Enter a number: ")
 num2 = input("Enter a number: ")
