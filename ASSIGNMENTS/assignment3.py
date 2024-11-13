@@ -101,12 +101,42 @@
 # #13 Check Eligibility
 # age = int(input("Enter your age: "))
 # height = float(input("Enter your height in cm: "))
+# print("Ok")
 
-#14 Check Loan Eligibility
-income = int(input("Enter your monthly income: "))
-credit_score = int(input('Enter your credit score: '))
-period = int(input("Enter how many years of work experience: "))
-if (income>50000 and credit_score>700) or ((income>=30000 and income<=50000) and (credit_score>750 or period>5)):
-    print("Congrats! You are eligible to apply for loan.")
-elif income<30000:
-    print("Sorry! You are ineligible for loan.")
+# #14 Check Loan Eligibility
+# income = int(input("Enter your monthly income: "))
+# credit_score = int(input('Enter your credit score: '))
+# period = int(input("Enter how many years of work experience: "))
+# if (income>50000 and credit_score>700) or ((income>=30000 and income<=50000) and (credit_score>750 or period>5)):
+#     print("Congrats! You are eligible to apply for loan.")
+# elif income<30000:
+#     print("Sorry! You are ineligible for loan.")
+# else:
+#     print("Sorry! You are ineligible for loan.")
+
+# #15 Word categorization
+# word = input("Enter a word: ")
+# if len(word)<4:
+#     print("Short")
+# elif len(word)>4 and len(word)<=7:
+#     print("Medium")
+# else:
+#     print("Long")
+
+#16 Comparing Sum of Digits
+num1 = input("Enter a number: ")
+num2 = input("Enter a number: ")
+l1 = list(num1)
+l2 = list(num2)
+sum1 = 0
+sum2 = 0
+for i,j in l1,l2:
+    sum1 += i
+    sum2 += j
+
+if sum1>sum2:
+    print("The sum of digits of",num1,"is greater than that of",num2)
+elif sum1<sum2:
+    print("The sum of digits of",num2,"is greater than that of",num1)
+else:
+    print("The sum of digits in both the numbers are equal.")
