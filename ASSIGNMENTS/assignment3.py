@@ -131,9 +131,10 @@ l1 = list(num1)
 l2 = list(num2)
 sum1 = 0
 sum2 = 0
-for i,j in l1,l2:
-    sum1 += i
-    sum2 += j
+
+for i, j in zip(l1, l2):
+    sum1 += int(i)
+    sum2 += int(j)
 
 if sum1>sum2:
     print("The sum of digits of",num1,"is greater than that of",num2)
