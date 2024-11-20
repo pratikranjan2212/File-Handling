@@ -123,22 +123,53 @@
 # else:
 #     print("Long")
 
+# #16 Comparing Sum of Digits
+# num1 = input("Enter a number: ")
+# num2 = input("Enter a number: ")
+# l1 = list(num1)
+# l2 = list(num2)
+# sum1 = 0
+# sum2 = 0
+# for i, j in zip(l1, l2):
+#     sum1 += int(i)
+#     sum2 += int(j)
 
-#16 Comparing Sum of Digits
-num1 = input("Enter a number: ")
-num2 = input("Enter a number: ")
-l1 = list(num1)
-l2 = list(num2)
-sum1 = 0
-sum2 = 0
+# if sum1>sum2:
+#     print("The sum of digits of",num1,"is greater than that of",num2)
+# elif sum1<sum2:
+#     print("The sum of digits of",num2,"is greater than that of",num1)
+# else:
+#     print("The sum of digits in both the numbers are equal.")
 
-for i, j in zip(l1, l2):
-    sum1 += int(i)
-    sum2 += int(j)
+#17 Date Representation
+day = int(input("Enter a day (1-31): "))
+month = int(input("Enter a month (1-12): "))
+year = int(input("Enter a year (1500 BC - 2898 AD): "))
+month_31days = [1,3,5,7,8,10,12]
+month_30days = [4,6,9,11]
 
-if sum1>sum2:
-    print("The sum of digits of",num1,"is greater than that of",num2)
-elif sum1<sum2:
-    print("The sum of digits of",num2,"is greater than that of",num1)
-else:
-    print("The sum of digits in both the numbers are equal.")
+def Date_Check():
+    if (day>0 and day<=31) and (month>=1 and month <=12) and (year>=1500 and year<=2898):
+        if month==2 and day<=28:
+            print("Valid Date")
+        elif (year%400==0 or (year%4==0 and year%100!=0)):
+            if (month==2 and day>29):
+                print("Invalid Date")
+            else:
+                print("Valid Date")
+        elif (day==31):
+            if month in month_31days:
+                print("Valid Date")
+            else:
+                print("Invalid Date")
+        elif (day==30):
+            if month in month_30days:
+                print("Valid Date")
+            else:
+                print("Invalid Date")
+        else:
+            print("Valid Date")
+    else:
+        print("Invalid Date")
+    
+Date_Check()
