@@ -193,8 +193,105 @@ for char in original_string:
     reversed_string = char + reversed_string
 print("Reversed string: ",reversed_string)
 
+#Q23
+string = input("Enter the string: ")
+length = 0
+for char in string:
+    length +=1
+print("Length of the string: ",length)
 
+#Q24
+while True:
+    num = input("Enter a number: ")
+    if num.replace('.' , ' ' , 1).isdigit() and num.count('.')<=1:
+        number = float(num)
+        break
+    else:
+        pass
+print("You enter the number: ", number)
 
+#Q25
+rows = int(input("Enter the number of rows: "))
+cols = int(input("Enter the number of columns: "))
+print("Enter the elements of the first matrix row by row:")
+matrix1 = []
+for _ in range(rows):
+    matrix1.append(list(map(int, input().split())))
+print("Enter the elements of the second matrix row by row:")
+matrix2 = []
+for _ in range(rows):
+    matrix2.append(list(map(int, input().split())))
+if len(matrix1) != len(matrix2) or len(matrix1[0]) != len(matrix2[0]):
+    raise ValueError("Matrices must have the same dimensions for addition.")
+result = []
+for i in range(rows):
+    row = []
+    for j in range(cols):
+        row.append(matrix1[i][j] + matrix2[i][j])
+    result.append(row)
+print("The resulting matrix after addition is:")
+for row in result:
+    print(" ".join(map(str, row)))
+
+#Q26
+rows1 = int(input("Enter the number of rows for the first matrix: "))
+cols1 = int(input("Enter the number of columns for the first matrix: "))
+
+rows2 = int(input("Enter the number of rows for the second matrix: "))
+cols2 = int(input("Enter the number of columns for the second matrix: "))
+if cols1 != rows2:
+    raise ValueError("Matrix multiplication not possible: columns of first matrix must equal rows of second matrix.")
+print("Enter the elements of the first matrix row by row (space-separated):")
+matrix1 = []
+for j in range(rows1):
+    matrix1.append(list(map(int, input().split())))
+    
+print("Enter the elements of the second matrix row by row (space-separated):")
+matrix2 = []
+for j in range(rows2):
+    matrix2.append(list(map(int, input().split())))
+result = [[0 for j in range(cols2)] for j in range(rows1)]
+
+for i in range(rows1):
+    for j in range(cols2):
+        for k in range(cols1):
+            result[i][j] += matrix1[i][k] * matrix2[k][j]
+print("The resulting matrix after multiplication is:")
+for row in result:
+    print(" ".join(map(str, row)))
+
+#Q27
+input_string = input("Enter a string: ")
+result = ""
+seen = ""
+for char in input_string:
+    if char not in seen:
+        result += char  
+        seen += char    
+print("String after removing duplicates:", result)
+
+#Q28
+input_string = input("Enter a string: ")
+if not input_string: 
+    print("The string is empty.")
+else:
+    print("The string is not empty.")
+
+#Q29
+input_string = input("Enter a string: ")
+result = ""
+for char in input_string:
+    if not char.isdigit():  
+        result += char 
+print("String after removing digits:", result)
+
+#Q30
+input_string = input("Enter a string: ")
+result = ""
+words = input_string.split()
+for word in words:
+    result += word.capitalize() + " "
+print("String after capitalizing each word:", result.strip())
 
 
     
