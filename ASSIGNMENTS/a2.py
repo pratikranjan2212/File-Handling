@@ -1,3 +1,5 @@
+# MINOR ASSIGNMENT 2
+ 
 from sympy import symbols,And,Or,Not,Equivalent,simplify_logic
 from sympy.logic.boolalg import truth_table,to_cnf,to_dnf
 
